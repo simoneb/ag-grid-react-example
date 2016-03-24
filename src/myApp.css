@@ -26,3 +26,35 @@ label {
     height: 100%;
     width: 100%;
 }
+
+.ag-header-cell {
+    background-color: #ffffff;
+    border-right: none !important;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #3b73b3
+}
+
+.ag-cell {
+    background-color: #ffffff;
+    border-right: none !important;
+    border-bottom: 1px solid #d8d8d8 !important;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+}
+
+div.ag-header {
+    border-bottom: 1px solid #d8d8d8 !important;
+}
+
+div.ag-root {
+    border: 1px solid #d8d8d8 !important;
+}
+
+div.ag-body {
+    background-color: #ffffff !important;
+}
+
+.ag-cell-range-selected {
+    background-color: #ffffff !important;
+}

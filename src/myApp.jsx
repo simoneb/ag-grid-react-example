@@ -61,6 +61,7 @@ export default class MyApp extends React.Component {
     onGridReady(params) {
         this.api = params.api;
         this.columnApi = params.columnApi;
+        this.api.sizeColumnsToFit();
     }
 
     selectAll() {
@@ -140,7 +141,7 @@ export default class MyApp extends React.Component {
                 </div>
             );
             gridTemplate = (
-                <div style={{height: 400}} className="ag-fresh">
+                <div style={{height: 400}} width="100%" className="ag-fresh">
                     <AgGridReact
                         // gridOptions is optional - it's possible to provide
                         // all values as React props
@@ -163,19 +164,23 @@ export default class MyApp extends React.Component {
                         rowData={this.state.rowData}
 
                         // no binding, just providing harde coded strings for the properties
-                        rowSelection="multiple"
-                        enableColResize="true"
-                        enableSorting="true"
-                        enableFilter="true"
-                        groupHeaders="true"
-                        rowHeight="22"
+                        // rowSelection="single"
+                        enableColResize="false"
+                        enableSorting="false"
+                        enableFilter="false"
+                        groupHeaders="false"
+                        rowHeight="35"
                         debug="true"
+                        suppressContextMenu="true"
+                        suppressCellSelection="true"
+                        suppressRowClickSelection="true"
+                        headerHeight="40"
                     />
                 </div>
             );
         }
 
-        return <div style={{width: '800px'}}>
+        return <div style={{width: '1200px'}}>
             <div style={{padding: '4px'}}>
                 {topHeaderTemplate}
                 {bottomHeaderTemplate}
